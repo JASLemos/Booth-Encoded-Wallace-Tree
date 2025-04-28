@@ -1,0 +1,50 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'CLK' is not connected on this instance [E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v:7]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Booth.v" Line 1. Module Booth_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CLA.v" Line 1. Module CLA(WIDTH=64) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Booth.v" Line 1. Module Booth_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CLA.v" Line 1. Module CLA(WIDTH=64) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CSA
+Compiling module xil_defaultlib.CLA(WIDTH=64)
+Compiling module xil_defaultlib.Booth_default
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav

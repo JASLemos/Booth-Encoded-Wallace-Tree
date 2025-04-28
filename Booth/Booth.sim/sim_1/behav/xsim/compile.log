@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/Booth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Booth
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/CLA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CLA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/CSA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

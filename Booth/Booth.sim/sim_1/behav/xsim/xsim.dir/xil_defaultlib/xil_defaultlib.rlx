@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+E:/IC/Aritmethic/Booth/Teste/Booth.v,1745869391,verilog,,E:/IC/Aritmethic/Booth/Teste/CLA.v,,Booth,,,,,,,,
+E:/IC/Aritmethic/Booth/Teste/Booth/Booth.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v,1745278721,verilog,,,,testbench,,,,,,,,
+E:/IC/Aritmethic/Booth/Teste/CLA.v,1724854751,verilog,,E:/IC/Aritmethic/Booth/Teste/CSA.v,,CLA,,,,,,,,
+E:/IC/Aritmethic/Booth/Teste/CSA.v,1745364303,verilog,,E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v,,CSA,,,,,,,,
+E:/IC/Aritmethic/Booth/Teste/KSA.v,1744596428,verilog,,E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v,,KSA,,,,,,,,
