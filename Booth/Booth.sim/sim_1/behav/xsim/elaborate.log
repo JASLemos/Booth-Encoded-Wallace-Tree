@@ -5,7 +5,6 @@ Running: E:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'CLK' is not connected on this instance [E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v:7]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Booth.v" Line 1. Module Booth_default doesn't have a timescale but at least one module in design has a timescale.

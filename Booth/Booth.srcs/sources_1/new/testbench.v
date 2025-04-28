@@ -25,7 +25,7 @@ module testbench();
         #10;
         x = 243;
         y = -243;
-        #30;
+        #10;
         $finish;
     
     end

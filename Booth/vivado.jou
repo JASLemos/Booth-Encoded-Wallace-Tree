@@ -3,10 +3,10 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Apr 28 16:14:01 2025
-# Process ID         : 13708
+# Start of session at: Mon Apr 28 17:14:02 2025
+# Process ID         : 10508
 # Current directory  : E:/IC/Aritmethic/Booth/Teste/Booth
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent8528 E:\IC\Aritmethic\Booth\Teste\Booth\Booth.xpr
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7344 E:\IC\Aritmethic\Booth\Teste\Booth\Booth.xpr
 # Log file           : E:/IC/Aritmethic/Booth/Teste/Booth/vivado.log
 # Journal file       : E:/IC/Aritmethic/Booth/Teste/Booth\vivado.jou
 # Running On         : DESKTOP-IQB8PGC
@@ -19,41 +19,16 @@
 # Host memory        : 15915 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 24505 MB
-# Available Virtual  : 11398 MB
+# Available Virtual  : 11823 MB
 #-----------------------------------------------------------
 start_gui
 open_project E:/IC/Aritmethic/Booth/Teste/Booth/Booth.xpr
 update_compile_order -fileset sources_1
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-refresh_design
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-launch_simulation
-source testbench.tcl
-close_sim
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-launch_simulation
-source testbench.tcl
-close_sim
-refresh_design
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-launch_simulation
-source testbench.tcl
-close_sim
-refresh_design
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-refresh_design
-refresh_design
-synth_design -top Booth -part xc7a50tcsg324-3 -lint 
-launch_simulation
-source testbench.tcl
-close_sim
-refresh_design
 update_compile_order -fileset sources_1
-refresh_design
+add_files -norecurse E:/IC/Aritmethic/Booth/Teste/CLA.v
 update_compile_order -fileset sources_1
-refresh_design
-refresh_design
-refresh_design
+synth_design -top Booth -part xc7a50tcsg324-3 -lint 
+synth_design -top Booth -part xc7a50tcsg324-3 -lint 
+launch_simulation
+source testbench.tcl
+close_sim
