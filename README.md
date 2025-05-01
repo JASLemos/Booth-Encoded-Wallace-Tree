@@ -3,6 +3,7 @@
 This repository presents a 32 bit **Radix-4 Booth Encoded Wallace Tree Multiplier**
 described in Verilog HDL and synthetized for a Artix-7 FPGA, xc7a50tcsg324-3, 
 using Vivado Design Suite 25.1.
+
 ---
 ## Architecture
 The multiplier consists of:
@@ -13,8 +14,8 @@ The multiplier consists of:
   - **Kogge-Stone Adder (KSA)** (Faster but more power/area-intensive)  
 - The **Wallace Tree** using CSAs is essentially the same as a 16x16 multiplier,
 as shown in:
-
-
+![Wallace Tree Diagram](Typical-Wallace-tree.png)
+---
 ## Features  
 - **Booth Radix-4 Algorithm** – Reduces partial products by half  
 - **Wallace Tree Compression** – Optimized for fast multiplication  
@@ -26,3 +27,4 @@ For questions or feedback, feel free to reach out:
 
 - **Email**: d2022004055@unifei.edu.br
 - **GitHub**: [JASLemos](https://github.com/JASLemos)
+---
