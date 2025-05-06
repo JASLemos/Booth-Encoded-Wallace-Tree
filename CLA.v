@@ -14,11 +14,7 @@ module CLA
   genvar i;
   generate
     for (i = 0; i < WIDTH; i = i + 1) begin : carry_gen
-      if (i == 0) begin
         assign Ci[i + 1] = (A[i] & B[i]) | ((A[i] ^ B[i]) & Ci[i]);
-      end else begin
-        assign Ci[i + 1] = (A[i] & B[i]) | ((A[i] ^ B[i]) & Ci[i]);
-      end
     end
   endgenerate
 
