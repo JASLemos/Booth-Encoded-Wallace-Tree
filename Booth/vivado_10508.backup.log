@@ -1,0 +1,346 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Apr 28 17:14:02 2025
+# Process ID         : 10508
+# Current directory  : E:/IC/Aritmethic/Booth/Teste/Booth
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7344 E:\IC\Aritmethic\Booth\Teste\Booth\Booth.xpr
+# Log file           : E:/IC/Aritmethic/Booth/Teste/Booth/vivado.log
+# Journal file       : E:/IC/Aritmethic/Booth/Teste/Booth\vivado.jou
+# Running On         : DESKTOP-IQB8PGC
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 5 5500U with Radeon Graphics         
+# CPU Frequency      : 2096 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 15915 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 24505 MB
+# Available Virtual  : 11823 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/IC/Aritmethic/Booth/Teste/Booth/Booth.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'E:/IC/Aritmethic/Booth/Teste/Booth/Booth.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 1225.336 ; gain = 122.762
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse E:/IC/Aritmethic/Booth/Teste/CLA.v
+update_compile_order -fileset sources_1
+synth_design -top Booth -part xc7a50tcsg324-3 -lint 
+Command: synth_design -top Booth -part xc7a50tcsg324-3 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13940
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1712.043 ; gain = 445.582
+---------------------------------------------------------------------------------
+Clean up Linter database...
+INFO: [Synth 8-6157] synthesizing module 'Booth' [E:/IC/Aritmethic/Booth/Teste/Booth.v:1]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-6157] synthesizing module 'CSA' [E:/IC/Aritmethic/Booth/Teste/CSA.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CSA' (1#1) [E:/IC/Aritmethic/Booth/Teste/CSA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CLA' [E:/IC/Aritmethic/Booth/Teste/CLA.v:1]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CLA' (2#1) [E:/IC/Aritmethic/Booth/Teste/CLA.v:1]
+WARNING: [Synth 8-7071] port 'Cin' of module 'CLA' is unconnected for instance 'CPA' [E:/IC/Aritmethic/Booth/Teste/Booth.v:92]
+WARNING: [Synth 8-7071] port 'Cout' of module 'CLA' is unconnected for instance 'CPA' [E:/IC/Aritmethic/Booth/Teste/Booth.v:92]
+WARNING: [Synth 8-7023] instance 'CPA' of module 'CLA' has 5 connections declared, but only 3 given [E:/IC/Aritmethic/Booth/Teste/Booth.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'Booth' (3#1) [E:/IC/Aritmethic/Booth/Teste/Booth.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 1828.875 ; gain = 562.414
+---------------------------------------------------------------------------------
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Apr 28 17:16:07 2025
+| Host         : DESKTOP-IQB8PGC running 64-bit major release  (build 9200)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RTL Linter Report
+
+Table of Contents
+-----------------
+1. Summary
+
+1. Summary
+----------
+
++-----------+----------+--------------+----------+
+| Rule ID   | Severity | # Violations | # Waived |
++-----------+----------+--------------+----------+
+| ASSIGN-5  | WARNING  | 2            | 0        |
+| ASSIGN-6  | WARNING  | 14           | 0        |
+| ASSIGN-12 | WARNING  | 1            | 0        |
++-----------+----------+--------------+----------+
+
+
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'ii' are not set. First unset bit index is 0. 
+RTL Name 'ii', Hierarchy 'Booth', File 'Booth.v', Line 16.
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'prod' are not set. First unset bit index is 0. 
+RTL Name 'prod', Hierarchy 'Booth', File 'Booth.v', Line 13.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C0' are not read. First unread bit index is 63. 
+RTL Name 'C0', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C1' are not read. First unread bit index is 63. 
+RTL Name 'C1', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C10' are not read. First unread bit index is 63. 
+RTL Name 'C10', Hierarchy 'Booth', File 'Booth.v', Line 76.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C11' are not read. First unread bit index is 63. 
+RTL Name 'C11', Hierarchy 'Booth', File 'Booth.v', Line 76.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C12' are not read. First unread bit index is 63. 
+RTL Name 'C12', Hierarchy 'Booth', File 'Booth.v', Line 82.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C13' are not read. First unread bit index is 63. 
+RTL Name 'C13', Hierarchy 'Booth', File 'Booth.v', Line 87.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C2' are not read. First unread bit index is 63. 
+RTL Name 'C2', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C3' are not read. First unread bit index is 63. 
+RTL Name 'C3', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C4' are not read. First unread bit index is 63. 
+RTL Name 'C4', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C5' are not read. First unread bit index is 63. 
+RTL Name 'C5', Hierarchy 'Booth', File 'Booth.v', Line 63.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C6' are not read. First unread bit index is 63. 
+RTL Name 'C6', Hierarchy 'Booth', File 'Booth.v', Line 63.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C7' are not read. First unread bit index is 63. 
+RTL Name 'C7', Hierarchy 'Booth', File 'Booth.v', Line 63.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C8' are not read. First unread bit index is 63. 
+RTL Name 'C8', Hierarchy 'Booth', File 'Booth.v', Line 70.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C9' are not read. First unread bit index is 63. 
+RTL Name 'C9', Hierarchy 'Booth', File 'Booth.v', Line 70.
+WARNING: [Synth 37-135] [ASSIGN-12]Unconnected input ports found on instance 'CPA', port name is 'Cin'. 
+Hierarchy 'Booth', File 'E:/IC/Aritmethic/Booth/Teste/Booth.v', Line 92.
+INFO: [Synth 37-85] Total of 17 linter message(s) generated.
+INFO: [Synth 37-45] Linter Run Finished!
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 1828.875 ; gain = 562.414
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 1828.875 ; gain = 564.387
+synth_design -top Booth -part xc7a50tcsg324-3 -lint 
+Command: synth_design -top Booth -part xc7a50tcsg324-3 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1828.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+Clean up Linter database...
+INFO: [Synth 8-6157] synthesizing module 'Booth' [E:/IC/Aritmethic/Booth/Teste/Booth.v:1]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-226] default block is never used [E:/IC/Aritmethic/Booth/Teste/Booth.v:33]
+INFO: [Synth 8-6157] synthesizing module 'CSA' [E:/IC/Aritmethic/Booth/Teste/CSA.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CSA' (1#1) [E:/IC/Aritmethic/Booth/Teste/CSA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CLA' [E:/IC/Aritmethic/Booth/Teste/CLA.v:1]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CLA' (2#1) [E:/IC/Aritmethic/Booth/Teste/CLA.v:1]
+WARNING: [Synth 8-7071] port 'Cout' of module 'CLA' is unconnected for instance 'CPA' [E:/IC/Aritmethic/Booth/Teste/Booth.v:92]
+WARNING: [Synth 8-7023] instance 'CPA' of module 'CLA' has 5 connections declared, but only 4 given [E:/IC/Aritmethic/Booth/Teste/Booth.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'Booth' (3#1) [E:/IC/Aritmethic/Booth/Teste/Booth.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1853.125 ; gain = 24.250
+---------------------------------------------------------------------------------
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Apr 28 17:17:39 2025
+| Host         : DESKTOP-IQB8PGC running 64-bit major release  (build 9200)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RTL Linter Report
+
+Table of Contents
+-----------------
+1. Summary
+
+1. Summary
+----------
+
++----------+----------+--------------+----------+
+| Rule ID  | Severity | # Violations | # Waived |
++----------+----------+--------------+----------+
+| ASSIGN-5 | WARNING  | 2            | 0        |
+| ASSIGN-6 | WARNING  | 14           | 0        |
++----------+----------+--------------+----------+
+
+
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'ii' are not set. First unset bit index is 0. 
+RTL Name 'ii', Hierarchy 'Booth', File 'Booth.v', Line 16.
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'prod' are not set. First unset bit index is 0. 
+RTL Name 'prod', Hierarchy 'Booth', File 'Booth.v', Line 13.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C0' are not read. First unread bit index is 63. 
+RTL Name 'C0', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C1' are not read. First unread bit index is 63. 
+RTL Name 'C1', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C10' are not read. First unread bit index is 63. 
+RTL Name 'C10', Hierarchy 'Booth', File 'Booth.v', Line 76.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C11' are not read. First unread bit index is 63. 
+RTL Name 'C11', Hierarchy 'Booth', File 'Booth.v', Line 76.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C12' are not read. First unread bit index is 63. 
+RTL Name 'C12', Hierarchy 'Booth', File 'Booth.v', Line 82.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C13' are not read. First unread bit index is 63. 
+RTL Name 'C13', Hierarchy 'Booth', File 'Booth.v', Line 87.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C2' are not read. First unread bit index is 63. 
+RTL Name 'C2', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C3' are not read. First unread bit index is 63. 
+RTL Name 'C3', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C4' are not read. First unread bit index is 63. 
+RTL Name 'C4', Hierarchy 'Booth', File 'Booth.v', Line 54.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C5' are not read. First unread bit index is 63. 
+RTL Name 'C5', Hierarchy 'Booth', File 'Booth.v', Line 63.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C6' are not read. First unread bit index is 63. 
+RTL Name 'C6', Hierarchy 'Booth', File 'Booth.v', Line 63.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C7' are not read. First unread bit index is 63. 
+RTL Name 'C7', Hierarchy 'Booth', File 'Booth.v', Line 63.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C8' are not read. First unread bit index is 63. 
+RTL Name 'C8', Hierarchy 'Booth', File 'Booth.v', Line 70.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'C9' are not read. First unread bit index is 63. 
+RTL Name 'C9', Hierarchy 'Booth', File 'Booth.v', Line 70.
+INFO: [Synth 37-85] Total of 16 linter message(s) generated.
+INFO: [Synth 37-45] Linter Run Finished!
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1853.125 ; gain = 24.250
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 1853.125 ; gain = 24.250
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'testbench'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/IC/Aritmethic/Booth/Teste/Booth/Booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Vivado/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/IC/Aritmethic/Booth/Teste/Booth/Booth.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/Booth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Booth
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/CLA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CLA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/CSA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/IC/Aritmethic/Booth/Teste/Booth/Booth.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Booth.v" Line 1. Module Booth_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CLA.v" Line 1. Module CLA(WIDTH=64) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Booth.v" Line 1. Module Booth_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CLA.v" Line 1. Module CLA(WIDTH=64) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CSA
+Compiling module xil_defaultlib.CLA(WIDTH=64)
+Compiling module xil_defaultlib.Booth_default
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1853.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/IC/Aritmethic/Booth/Teste/Booth/Booth.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 40 ns : File "E:/IC/Aritmethic/Booth/Teste/Booth/Booth.srcs/sources_1/new/testbench.v" Line 29
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1853.125 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1853.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 28 17:19:43 2025...

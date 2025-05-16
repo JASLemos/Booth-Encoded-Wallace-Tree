@@ -1,45 +1,86 @@
-module KSA #(parameter N = 32) (
-    input [N-1:0] A, B,
-    output [N-1:0] Sum
+module KSA(
+     input [63:0] A, B,
+     input Cin,
+     output [63:0] Sum,
+     output Cout
 );
-    
-    // Pre-processing stage
-    wire [N-1:0] P, G;
-    assign P = A ^ B;
-    assign G = A & B;
 
-    // Generate propagate and generate signals
-    wire [N-1:0] G_stage [0:$clog2(N)];
-    wire [N-1:0] P_stage [0:$clog2(N)];
+  /*
+   Equations:
+       Sum[i] = A[i] ^ B[i] ^ G[i-1:-1]
+       G[i:j] = G[i:k] + P[i:k] & G[k-1:j]
+       P[i:j] = P[i:k] & P[k-1:j]
+  */
+  
+  // 6 levels for a 64 bit Adder
+  wire [63:0] G_stage [6:0];
+  wire [63:0] P_stage [6:0];
 
-    assign G_stage[0] = G;
-    assign P_stage[0] = P;
+  // Level 0
+  assign G_stage[0] = A & B;
+  assign P_stage[0] = A ^ B;
 
-    genvar i, j;
-    generate
-        for (i = 1; i <= $clog2(N); i = i + 1) begin : stage
-            for (j = 0; j < N; j = j + 1) begin : bit
-                if (j >= (1 << (i - 1))) begin
-                    assign G_stage[i][j] = G_stage[i-1][j] | (P_stage[i-1][j] & G_stage[i-1][j - (1 << (i - 1))]);
-                    assign P_stage[i][j] = P_stage[i-1][j] & P_stage[i-1][j - (1 << (i - 1))];
-                end else begin
-                    assign G_stage[i][j] = G_stage[i-1][j];
-                    assign P_stage[i][j] = P_stage[i-1][j];
-                end
-            end
-        end
-    endgenerate
+  genvar i;
+  // Stage 1, j=1
+  generate
+    for(i=0;i<64;i=i+1) begin: Stage1
+      assign G_stage[1][i] = (i > 0) ? (G_stage[0][i] | (G_stage[0][i-1] & P_stage[0][i])) : G_stage[0][i];
+      assign P_stage[1][i] = (i > 0) ? (P_stage[0][i] & P_stage[0][i-1]) : P_stage[0][i];
+    end
+  endgenerate
 
-    // Carries
-    wire [N-1:0] C;
-    assign C[0] = G[0];
-    generate
-        for (i = 1; i < N; i = i + 1) begin : carry
-            assign C[i] = G_stage[$clog2(N)][i];
-        end
-    endgenerate
+  // Stage 2, j=2
+  generate
+    for(i=0;i<64;i=i+1) begin: Stage2
+      assign G_stage[2][i] = (i > 1) ? (G_stage[1][i] | (G_stage[1][i-2] & P_stage[1][i])) : G_stage[1][i];
+      assign P_stage[2][i] = (i > 1) ? (P_stage[1][i] & P_stage[1][i-2]) : P_stage[1][i];
+    end
+  endgenerate
 
-    // Assigning outputs
-    assign Sum = P ^ {C[N-2:0], 1'b0};
+  // Stage 3
+  generate
+    for(i=0;i<64;i=i+1) begin: Stage3
+      assign G_stage[3][i] = (i > 3) ? (G_stage[2][i] | (G_stage[2][i-4] & P_stage[2][i])) : G_stage[2][i];
+      assign P_stage[3][i] = (i > 3) ? (P_stage[2][i] & P_stage[2][i-4]) : P_stage[2][i];
+    end
+  endgenerate
+
+  // Stage 4
+  generate
+    for(i=0;i<64;i=i+1) begin: Stage4
+      assign G_stage[4][i] = (i > 7) ? (G_stage[3][i] | (G_stage[3][i-8] & P_stage[3][i])) : G_stage[3][i];
+      assign P_stage[4][i] = (i > 7) ? (P_stage[3][i] & P_stage[3][i-8]) : P_stage[3][i];
+    end
+  endgenerate
+
+  // Stage 5
+  generate
+    for(i=0;i<64;i=i+1) begin: Stage5
+      assign G_stage[5][i] = (i > 15) ? (G_stage[4][i] | (G_stage[4][i-16] & P_stage[4][i])) : G_stage[4][i];
+      assign P_stage[5][i] = (i > 15) ? (P_stage[4][i] & P_stage[4][i-16]) : P_stage[4][i];
+    end
+  endgenerate
+
+  // Stage 6
+  generate
+    for(i=0;i<64;i=i+1) begin: Stage6
+      assign G_stage[6][i] = (i > 31) ? (G_stage[5][i] | (G_stage[5][i-32] & P_stage[5][i])) : G_stage[5][i];
+      assign P_stage[6][i] = (i > 31) ? (P_stage[5][i] & P_stage[5][i-32]) : P_stage[5][i];
+    end
+  endgenerate
+  
+  // Carries
+  wire [63:0] C;
+  assign C[0] = G_stage[0][0] | (P_stage[0][0] & Cin); 
+
+  generate
+    for(i=1;i<64;i=i+1) begin: Carries
+      assign C[i] = G_stage[6][i] | (P_stage[6][i] & Cin);
+    end
+  endgenerate
+
+  // Outputs
+  assign Sum = P_stage[0] ^ {C[62:0], Cin};
+  assign Cout = C[63];
 
 endmodule
