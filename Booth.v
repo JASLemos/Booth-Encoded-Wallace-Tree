@@ -88,7 +88,8 @@ module Booth #(
   CSA csa14(.A(S12), .B({C12[62:0],1'b0}), .C({C11[62:0],1'b0}), .Sum(S13), .Carry(C13));
 
   // Final adder
-  KSA KoggeStone(.A(S13), .B({C13[62:0],1'b0}), .Cin(1'b0), .Sum(p));
+  Knowles CPA(.A(S13), .B({C13[62:0],1'b0}), .Cin(1'b0), .Sum(p));
+  //KSA KoggeStone(.A(S13), .B({C13[62:0],1'b0}), .Cin(1'b0), .Sum(p));
   //CLA #(.WIDTH(64)) CPA(.A(S13), .B({C13[62:0],1'b0}), .Cin(1'b0), .S(p));
 
 endmodule

@@ -22,7 +22,7 @@ WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA 
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/KSA.v" Line 48. Module KSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Knowles.v" Line 1. Module Knowles doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Booth.v" Line 1. Module Booth_default doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
@@ -38,11 +38,11 @@ WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA 
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/CSA.v" Line 1. Module CSA doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/KSA.v" Line 48. Module KSA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/IC/Aritmethic/Booth/Teste/Knowles.v" Line 1. Module Knowles doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.CSA
-Compiling module xil_defaultlib.KSA
+Compiling module xil_defaultlib.Knowles
 Compiling module xil_defaultlib.Booth_default
 Compiling module xil_defaultlib.testbench
 Compiling module xil_defaultlib.glbl
