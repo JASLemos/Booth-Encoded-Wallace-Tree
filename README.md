@@ -20,7 +20,7 @@ as shown in:
 ## Features  
 - **Booth Radix-4 Algorithm** – Reduces partial products by half  
 - **Wallace Tree Compression** – Optimized for fast multiplication  
-- **Parametrized Final Adder** – Choose between CLA (balanced) or KSA (high-speed)  
+- **Parametrized Final Adder** – Choose between CLA (balanced) or Parallel Prefix Adders (high-speed)  
 ---
 ## Contact
 
