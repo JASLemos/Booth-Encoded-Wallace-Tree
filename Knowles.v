@@ -40,8 +40,8 @@ module Knowles(
   // Level 3
   generate
     for(i=0;i<64;i=i+1) begin: Stage3
-      assign G3[i] = (i > 3) ? (G3[i] | (G2[i-4] & P2[i])) : G2[i];
-      assign P3[i] = (i >= 8) ? (P3[i] & P2[i-4]) : P2[i];
+        assign G3[i] = (i > 3) ? (G2[i] | (G2[i-4] & P2[i])) : G2[i];
+        assign P3[i] = (i >= 8) ? (P2[i] & P2[i-4]) : P2[i];
     end
   endgenerate
 
