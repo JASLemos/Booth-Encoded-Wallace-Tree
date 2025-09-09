@@ -1,85 +1,117 @@
 module Knowles(
-    input [63:0] A, B,
-    input Cin,
+    input  [63:0] A, B,
+    input         Cin,
     output [63:0] Sum,
-    output Cout
+    output        Cout
 );
 
-    /*
-   Equations:
-       Sum[i] = A[i] ^ B[i] ^ G[i-1:-1]
-       G[i:j] = G[i:k] + P[i:k] & G[k-1:j]
-       P[i:j] = P[i:k] & P[k-1:j]
-  */
-  
-  // 6 levels for a 64 bit Adder
-  wire [63:0] G0, P0, G1, P1, G2, P2, G3, P3, G4, P4, G5, P5, G6;
+    // Initial generate/propagate
+    wire [63:0] G0, P0;
+    assign G0 = A & B;
+    assign P0 = A ^ B;
 
-  // level 0, pre processing stage
-  assign G0 = A & B;
-  assign P0 = A ^ B;
+    // Prefix levels
+    wire [63:0] G1, P1;
+    wire [63:0] G2, P2;
+    wire [63:0] G3, P3;
+    wire [63:0] G4, P4;
+    wire [63:0] G5, P5;
+    wire [63:0] G6, P6;
 
-  // Level 1
-  genvar i;
-  generate;
-    for(i = 0;i < 64;i = i + 1)
-    begin
-      assign G1[i] = (i > 0) ? (G0[i] | (G0[i-1] & P0[i])) : G0[i];
-      assign P1[i] = (i >= 2) ? (P0[i] & P0[i-1]) : P0[i];
-    end
-  endgenerate
+    // -----------------------
+    // Level 1: distance = 1
+    // -----------------------
+    assign G1[0] = G0[0];
+    assign P1[0] = P0[0];
+    genvar i;
+    generate
+        for (i = 1; i < 64; i = i + 1) begin
+            assign G1[i] = G0[i] | (P0[i] & G0[i-1]);
+            assign P1[i] = P0[i] & P0[i-1];
+        end
+    endgenerate
 
-  // Level 2
-  generate
-    for(i=0;i<64;i=i+1) begin: Stage2
-      assign G2[i] = (i > 1) ? (G1[i] | (G1[i-2] & P1[i])) : G1[i];
-      assign P2[i] = (i >= 4) ? (P1[i] & P1[i-2]) : P1[i];
-    end
-  endgenerate
+    // -----------------------
+    // Level 2: distance = 2
+    // -----------------------
+    assign G2[1:0] = G1[1:0];
+    assign P2[1:0] = P1[1:0];
+    generate
+        for (i = 2; i < 64; i = i + 1) begin
+            assign G2[i] = G1[i] | (P1[i] & G1[i-2]);
+            assign P2[i] = P1[i] & P1[i-2];
+        end
+    endgenerate
 
-  // Level 3
-  generate
-    for(i=0;i<64;i=i+1) begin: Stage3
-        assign G3[i] = (i > 3) ? (G2[i] | (G2[i-4] & P2[i])) : G2[i];
-        assign P3[i] = (i >= 8) ? (P2[i] & P2[i-4]) : P2[i];
-    end
-  endgenerate
+    // -----------------------
+    // Level 3: distance = 4
+    // -----------------------
+    assign G3[3:0] = G2[3:0];
+    assign P3[3:0] = P2[3:0];
+    generate
+        for (i = 4; i < 64; i = i + 1) begin
+            assign G3[i] = G2[i] | (P2[i] & G2[i-4]);
+            assign P3[i] = P2[i] & P2[i-4];
+        end
+    endgenerate
 
-  // Level 4
-  generate
-    for(i=0;i<64;i=i+1) begin: Stage4
-      assign G4[i] = (i > 7) ? (G3[i] | (G3[i-8] & P3[i])) : G3[i];
-      assign P4[i] = (i >= 16) ? (P3[i] & P3[i-8]) : P3[i];
-    end
-  endgenerate
-
-  // Level 5
-  generate
-    for(i=0;i<64;i=i+1) begin: Stage5
-      assign G5[i] = (i > 15) ? (G4[i] | (G4[i-16] & P4[i])) : G4[i];
-      assign P5[i] = (i >= 32) ? (P4[i] & P4[i-16]) : P4[i];
-    end
-  endgenerate
-
-  // Level 6
-  generate
-    for(i=0;i<64;i=i+1) begin: Stage6
-      assign G6[i] = (i >= 32) ? (G5[i] | (G5[i-32] & P5[i])) : G5[i];
-    end
-  endgenerate
-
-  // Carries
-  wire [63:0] C;
-  assign C[0] = G0[0] | (P0[0] & Cin); 
-
-  generate
-    for(i=1;i<64;i=i+1) begin: Carries
-      assign C[i] = G6[i - 1];
-    end
-  endgenerate
-
-  // Outputs
-  assign Sum = P0 ^ C;
-  assign Cout = C[63];
+    // -----------------------
+    // Level 4: distance = 8
+    // -----------------------
+    assign G4[7:0] = G3[7:0];
+    assign P4[7:0] = P3[7:0];
+    generate
+        for (i = 8; i < 64; i = i + 1) begin
+            assign G4[i] = G3[i] | (P3[i] & G3[i-8]);
+            assign P4[i] = P3[i] & P3[i-8];
+        end
+    endgenerate
     
+    // -----------------------
+    // Level 5: distance = 16
+    // -----------------------
+    assign G5[15:0] = G4[15:0];
+    assign P5[15:0] = P4[15:0];
+    generate
+        for (i = 16; i < 64; i = i + 1) begin
+            assign G5[i] = G4[i] | (P4[i] & G4[i-16]);
+            assign P5[i] = P4[i] & P4[i-16];
+        end
+    endgenerate
+    
+    // -----------------------
+    // Level 6: distance = 32
+    // -----------------------
+    assign G6[31:0] = G5[31:0];
+    assign P6[31:0] = P5[31:0];
+    generate
+        for (i = 32; i < 64; i = i + 1) begin
+            if(i % 2 == 0) begin
+                assign G6[i] = G5[i] | (P5[i] & G5[i-31]);
+                assign P6[i] = P5[i] & P5[i-31];
+            end
+            else begin
+                assign G6[i] = G5[i] | (P5[i] & G5[i-32]);
+                assign P6[i] = P5[i] & P5[i-32];            
+            end
+        end
+    endgenerate
+    
+    // -----------------------
+    // Carry computation
+    // -----------------------
+    wire [64:0] C;
+    assign C[0] = Cin;
+    generate
+        for (i = 0; i < 64; i = i + 1) begin
+            assign C[i+1] = G6[i] | (P6[i] & Cin);
+        end
+    endgenerate
+
+    // -----------------------
+    // Sum and Cout
+    // -----------------------
+    assign Sum  = P0 ^ C[63:0];
+    assign Cout = C[64];
+
 endmodule
